@@ -10,7 +10,7 @@ const soldierImages = [
     // הוסף כאן את נתיבי התמונות שלך
 ];
 document.getElementById('backButton').addEventListener('click', function () {
-    window.location.href = './start.html'; // ניתוב לעמוד הראשי
+    window.location.href = './index.html'; // ניתוב לעמוד הראשי
 });
 function createPlayerInputs() {
     const playerCount = parseInt(document.getElementById('playerCount').value, 10);
