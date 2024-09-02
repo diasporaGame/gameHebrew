@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הוספת שחקנים</title>
+    <link rel="stylesheet" type="text/css" href="./first.css">
+</head>
+<body>
+    <div class="header-logos">
+        <img src="./assets/לוגו שחור.png" alt="Logo 1" class="logo">
+        <img src="./assets/לוגו קקל מעודכן.png" alt="Logo 2" class="logo1">
+    </div>
+    <button id="backButton" class="back-button">חזור לעמוד ראשי</button>
+
+    <div id="overlay" class="overlay">
+        <div class="modal">
+            <h2>הכנס את מספר המשתתפים</h2>
+            <input type="number" id="playerCount" min="1" max="10">
+            <button onclick="createPlayerInputs()">אישור</button>
+        </div>
+    </div>
+    <div id="playerNames" class="player-names"></div>
+    <div id="soldiers" class="soldiers"></div>
+    <div id="gamePage" class="game-page" style="display: none;">
+        <button onclick="goToGamePage()">מעבר לעמוד המשחק</button>
+    </div>
+    <script src="./first.js"></script>
+</body>
+</html>
