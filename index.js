@@ -1,7 +1,7 @@
 function goToGroup() {
-    window.location.href = './FIRST-GROUP.html'; 
+    window.location.href = './first-group.html'; 
 }
 
 function goToIndividuals() {
-    window.location.href = './FIRST.html'; 
+    window.location.href = './first.html'; 
 }
