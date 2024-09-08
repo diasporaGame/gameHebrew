@@ -56,6 +56,14 @@ body {
 
 }
 
+.timer-press {
+    font-family: 'Cambria';
+    font-size: large;
+    background-color: #bae792;
+    position: absolute; 
+    top: -200px; 
+    right: 30px; 
+}
 
 
 #board {
@@ -611,4 +619,18 @@ img {
     border: 2px solid #218838;
 }
 
-/* // */
+#player-order-message {
+    position: absolute;
+    top: -150px;
+    left: 80px; /* המרחק מהצד הימני */
+    width: 200px; /* רוחב תיבת ההודעה */
+    background-color: rgba(255, 255, 255, 0.8); /* רקע לבן שקוף */
+    padding: 10px; /* ריווח פנימי */
+    border-radius: 8px; /* פינות מעוגלות */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* הצללה */
+    font-family: 'Arial', sans-serif; /* גופן */
+    font-size: 18px; /* גודל הטקסט */
+    color: #333; /* צבע הטקסט */
+    z-index: 10; /* מיקום עליון יחסית לשאר האלמנטים */
+    text-align: center; /* יישור לימין */
+}
