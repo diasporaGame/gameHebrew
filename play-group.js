@@ -260,7 +260,7 @@ function openAlertModal(message) {
 
 window.onload = function () {
     const diceContainer = document.getElementById('dice');
-    var oneMinute = 120,
+    var oneMinute = 60,
         display = document.querySelector('#timer');
 
 
