@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const players = JSON.parse(localStorage.getItem('players'));
 
     if (players && players.length > 0) {
-        let playerOrderMessage = "סדר השחקנים הוא<br>";
+        let playerOrderMessage = ":סדר השחקנים<br>";
 
         players.forEach((player, index) => {
             playerOrderMessage += `${player.name}<span style="margin-left: 0px;"></span><br>`;
