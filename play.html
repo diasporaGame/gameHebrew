@@ -1,26 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="he">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>לוח משחק</title>
     <link rel="stylesheet" type="text/css" href="./play.css">
 </head>
+
 <body>
 
-    <div class="header">
-        <div class="dice-container">
+       <div id="headerr">
             <div class="dice" id="dice">
                 <img src="./assets/dice-1.png" alt="Dice Face" id="diceImage">
             </div>
             <div class="timer-container">
-                <div id="timer" class="timer">1:00:00</div>
+                <div id="timer" class="timer">01:00:00</div>
             </div>
         </div>
-         <p class="timer-press">👆 להפעלת הטיימר לחץ</p>
-            <div id="player-order-message"></div>
-    </div>
+        <p class="timer-press">👆 להפעלת הטיימר לחץ</p>
+
+        <div id="player-order-message"></div>
+
+
     <button id="backButton" class="back-button">חזור לעמוד ראשי</button>
 
     <div id="alertModal" class="modal">
@@ -37,11 +39,13 @@
             <button id="startGameBtn">התחל משחק</button>
         </div>
     </div>
-    <div class="bottom-image">
-        <img src="./assets/מסע בזמן.png" alt="תמונה תחתונה">
-    </div>
-    <div class="tikets">
-        <img src="./assets/tikets.png" alt=" כרטיסים">
+    <div class="center-picture">
+        <div class="bottom-image">
+            <img src="./assets/מסע בזמן.png" alt="תמונה תחתונה">
+        </div>
+        <div class="tikets">
+            <img src="./assets/tikets.png" alt=" כרטיסים">
+        </div>
     </div>
     <div id="board">
         <div class="top-left-image">
@@ -50,142 +54,141 @@
         <div class="top-right-image">
             <img src="./assets/לוגו שחור.png" alt="לוגו ימין">
         </div>
-    <div id="board">
-        <div id="cell-1" class="cell corner">
-            <img src="./assets/התחל-1.png" alt="תמונה 1">
-        </div>
-        <div id="cell-2" class="cell horizontal">
-            <img src="./assets/fff.png" alt="תמונה 2">
-        </div>
-        <div id="cell-3" class="cell horizontal">
-            <img src="./assets/ירוק חדש.png" alt="תמונה 3">
-        </div>
-        <div id="cell-4" class="cell horizontal">
-            <img src="./assets/fff.png" alt="תמונה 4">
-        </div>
-        <div id="cell-5" class="cell horizontal">
-            <img src="./assets/קהילתי חדש.png" alt="תמונה 5">
-        </div>
-        <div id="cell-6" class="cell horizontal">
-            <img src="./assets/fff.png" alt="תמונה 6">
-        </div>
-        <div id="cell-7" class="cell horizontal">
-            <img src="./assets/ורוד חדש.png" alt="תמונה 7">
-        </div>
-        <div id="cell-8" class="cell horizontal">
-            <img src="./assets/ירוק חדש.png" alt="תמונה 8">
-        </div>
-        <div id="cell-9" class="cell horizontal">
-            <img src="./assets/ורוד חדש.png" alt="תמונה 9">
-        </div>
-        <div id="cell-10" class="cell horizontal">
-            <img src="./assets/fff.png" alt="תמונה 10">
-        </div>
-        <div id="cell-11" class="cell corner">
-            <img src="./assets/אישי חדש.png" alt="תמונה 11">
-        </div>
+        <div id="board">
+            <div id="cell-1" class="cell corner">
+                <img src="./assets/התחל-1.png" alt="תמונה 1">
+            </div>
+            <div id="cell-2" class="cell horizontal">
+                <img src="./assets/fff.png" alt="תמונה 2">
+            </div>
+            <div id="cell-3" class="cell horizontal">
+                <img src="./assets/ירוק חדש.png" alt="תמונה 3">
+            </div>
+            <div id="cell-4" class="cell horizontal">
+                <img src="./assets/fff.png" alt="תמונה 4">
+            </div>
+            <div id="cell-5" class="cell horizontal">
+                <img src="./assets/קהילתי חדש.png" alt="תמונה 5">
+            </div>
+            <div id="cell-6" class="cell horizontal">
+                <img src="./assets/fff.png" alt="תמונה 6">
+            </div>
+            <div id="cell-7" class="cell horizontal">
+                <img src="./assets/ורוד חדש.png" alt="תמונה 7">
+            </div>
+            <div id="cell-8" class="cell horizontal">
+                <img src="./assets/ירוק חדש.png" alt="תמונה 8">
+            </div>
+            <div id="cell-9" class="cell horizontal">
+                <img src="./assets/ורוד חדש.png" alt="תמונה 9">
+            </div>
+            <div id="cell-10" class="cell horizontal">
+                <img src="./assets/fff.png" alt="תמונה 10">
+            </div>
+            <div id="cell-11" class="cell corner">
+                <img src="./assets/אישי חדש.png" alt="תמונה 11">
+            </div>
 
 
-        <div id="cell-12" class="cell vertical">
-            <img src="./assets/fff.png" alt="תמונה 12">
-        </div>
-        <div id="cell-13" class="cell vertical">
-            <img src="./assets/ירוק חדש.png" alt="תמונה 13">
-        </div>
-        <div id="cell-14" class="cell vertical">
-            <img src="./assets/fff.png" alt="תמונה 14">
-        </div>
-        <div id="cell-15" class="cell vertical">
-            <img src="./assets/קהילתי חדש.png" alt="תמונה 15">
-        </div>
-        <div id="cell-16" class="cell vertical">
-            <img src="./assets/fff.png" alt="תמונה 16">
-        </div>
-        <div id="cell-17" class="cell vertical">
-            <img src="./assets/ורוד חדש.png" alt="תמונה 17">
-        </div>
-        <div id="cell-18" class="cell vertical">
-            <img src="./assets/ירוק חדש.png" alt="תמונה 18">
-        </div>
-        <div id="cell-19" class="cell vertical">
-            <img src="./assets/ורוד חדש.png" alt="תמונה 19">
-        </div>
-        <div id="cell-20" class="cell vertical">
-            <img src="./assets/fff.png" alt="תמונה 20">
-        </div>
+            <div id="cell-12" class="cell vertical">
+                <img src="./assets/fff.png" alt="תמונה 12">
+            </div>
+            <div id="cell-13" class="cell vertical">
+                <img src="./assets/ירוק חדש.png" alt="תמונה 13">
+            </div>
+            <div id="cell-14" class="cell vertical">
+                <img src="./assets/fff.png" alt="תמונה 14">
+            </div>
+            <div id="cell-15" class="cell vertical">
+                <img src="./assets/קהילתי חדש.png" alt="תמונה 15">
+            </div>
+            <div id="cell-16" class="cell vertical">
+                <img src="./assets/fff.png" alt="תמונה 16">
+            </div>
+            <div id="cell-17" class="cell vertical">
+                <img src="./assets/ורוד חדש.png" alt="תמונה 17">
+            </div>
+            <div id="cell-18" class="cell vertical">
+                <img src="./assets/ירוק חדש.png" alt="תמונה 18">
+            </div>
+            <div id="cell-19" class="cell vertical">
+                <img src="./assets/ורוד חדש.png" alt="תמונה 19">
+            </div>
+            <div id="cell-20" class="cell vertical">
+                <img src="./assets/fff.png" alt="תמונה 20">
+            </div>
 
 
-        <div id="cell-21" class="cell corner">
-            <img src="./assets/אסיר ציון.png" alt="תמונה 21">
-        </div>
+            <div id="cell-21" class="cell corner">
+                <img src="./assets/אסיר ציון.png" alt="תמונה 21">
+            </div>
 
 
-        <div id="cell-22" class="cell horizontal">
-            <img src="./assets/fff.png" alt="תמונה 22">
-        </div>
-        <div id="cell-23" class="cell horizontal">
-            <img src="./assets/ירוק חדש.png" alt="תמונה 23">
-        </div>
-        <div id="cell-24" class="cell horizontal">
-            <img src="./assets/fff.png" alt="תמונה 24">
-        </div>
-        <div id="cell-25" class="cell horizontal">
-            <img src="./assets/קהילתי חדש.png" alt="תמונה 25">
-        </div>
-        <div id="cell-26" class="cell horizontal">
-            <img src="./assets/fff.png" alt="תמונה 26">
-        </div>
-        <div id="cell-27" class="cell horizontal">
-            <img src="./assets/ורוד חדש.png" alt="תמונה 27">
-        </div>
-        <div id="cell-28" class="cell horizontal">
-            <img src="./assets/ירוק חדש.png" alt="תמונה 28">
-        </div>
-        <div id="cell-29" class="cell horizontal">
-            <img src="./assets/ורוד חדש.png" alt="תמונה 29">
-        </div>
-        <div id="cell-30" class="cell horizontal">
-            <img src="./assets/fff.png" alt="תמונה 30">
-        </div>
-        <div id="cell-31" class="cell corner">
-            <img src="./assets/אישי חדש.png" alt="תמונה 31">
-        </div>
+            <div id="cell-22" class="cell horizontal">
+                <img src="./assets/fff.png" alt="תמונה 22">
+            </div>
+            <div id="cell-23" class="cell horizontal">
+                <img src="./assets/ירוק חדש.png" alt="תמונה 23">
+            </div>
+            <div id="cell-24" class="cell horizontal">
+                <img src="./assets/fff.png" alt="תמונה 24">
+            </div>
+            <div id="cell-25" class="cell horizontal">
+                <img src="./assets/קהילתי חדש.png" alt="תמונה 25">
+            </div>
+            <div id="cell-26" class="cell horizontal">
+                <img src="./assets/fff.png" alt="תמונה 26">
+            </div>
+            <div id="cell-27" class="cell horizontal">
+                <img src="./assets/ורוד חדש.png" alt="תמונה 27">
+            </div>
+            <div id="cell-28" class="cell horizontal">
+                <img src="./assets/ירוק חדש.png" alt="תמונה 28">
+            </div>
+            <div id="cell-29" class="cell horizontal">
+                <img src="./assets/ורוד חדש.png" alt="תמונה 29">
+            </div>
+            <div id="cell-30" class="cell horizontal">
+                <img src="./assets/fff.png" alt="תמונה 30">
+            </div>
+            <div id="cell-31" class="cell corner">
+                <img src="./assets/אישי חדש.png" alt="תמונה 31">
+            </div>
 
 
-        <div id="cell-32" class="cell vertical">
-            <img src="./assets/fff.png" alt="תמונה 32">
+            <div id="cell-32" class="cell vertical">
+                <img src="./assets/fff.png" alt="תמונה 32">
+            </div>
+            <div id="cell-33" class="cell vertical">
+                <img src="./assets/ירוק חדש.png" alt="תמונה 33">
+            </div>
+            <div id="cell-34" class="cell vertical">
+                <img src="./assets/fff.png" alt="תמונה 34">
+            </div>
+            <div id="cell-35" class="cell vertical">
+                <img src="./assets/קהילתי חדש.png" alt="תמונה 35">
+            </div>
+            <div id="cell-36" class="cell vertical">
+                <img src="./assets/fff.png" alt="תמונה 36">
+            </div>
+            <div id="cell-37" class="cell vertical">
+                <img src="./assets/ורוד חדש.png" alt="תמונה 37">
+            </div>
+            <div id="cell-38" class="cell vertical">
+                <img src="./assets/ירוק חדש.png" alt="תמונה 38">
+            </div>
+            <div id="cell-39" class="cell vertical">
+                <img src="./assets/ורוד חדש.png" alt="תמונה 39">
+            </div>
+            <div id="cell-40" class="cell vertical">
+                <img src="./assets/fff.png" alt="תמונה 40">
+            </div>
         </div>
-        <div id="cell-33" class="cell vertical">
-            <img src="./assets/ירוק חדש.png" alt="תמונה 33">
-        </div>
-        <div id="cell-34" class="cell vertical">
-            <img src="./assets/fff.png" alt="תמונה 34">
-        </div>
-        <div id="cell-35" class="cell vertical">
-            <img src="./assets/קהילתי חדש.png" alt="תמונה 35">
-        </div>
-        <div id="cell-36" class="cell vertical">
-            <img src="./assets/fff.png" alt="תמונה 36">
-        </div>
-        <div id="cell-37" class="cell vertical">
-            <img src="./assets/ורוד חדש.png" alt="תמונה 37">
-        </div>
-        <div id="cell-38" class="cell vertical">
-            <img src="./assets/ירוק חדש.png" alt="תמונה 38">
-        </div>
-        <div id="cell-39" class="cell vertical">
-            <img src="./assets/ורוד חדש.png" alt="תמונה 39">
-        </div>
-        <div id="cell-40" class="cell vertical">
-            <img src="./assets/fff.png" alt="תמונה 40">
-        </div>
-    </div>
-    <div id="players" class="players"></div> 
+        <div id="players" class="players"></div>
 
-    <script src="./play-group.js"></script>
+        <script src="./play.js"></script>
 
 
 </body>
+
 </html>
-
-
