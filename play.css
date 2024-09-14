@@ -10,56 +10,40 @@ body {
 .header {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
-    width: auto;
-    flex-wrap: wrap;
-    /* padding: 20px; */
-    /* box-sizing: border-box; */
-    /* position: relative; */
-    /* background-color: #000; */
-    margin-right: 0px;
-    margin-top: 0px;
-    z-index: 200;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    /* הוספת position relative כדי לייעד מיקום ביחס לקונטיינר */
+}
 
-}
-#headerr{
-    display: flex;
-    flex-wrap: wrap;
-}
 .dice-container {
-    /* display: flex;
-    align-items: center; */
-    /* gap: 20px; */
-    /* position: absolute; */
-    /* top: 10px;
-    right: 20px; */
-    /* z-index: 10; */
-  
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* ריווח בין הקובייה לטיימרים */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    /* מיקום מימין */
+    z-index: 10;
 }
 
-/* .dice {
+.dice {
     margin-top: -300px;
     margin-right: 100px;
     cursor: pointer;
-} */
+}
 
 .timer-container {
-    /* margin-top: -500px; */
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-end; */
+    margin-top: -500px;
     display: flex;
-    flex-wrap: wrap;
-    top: 3%;
-    right: 8%;
-    border: solid,1px,#000;
-    position: absolute;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 1%;
-    z-index: 50;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
-/* 
+
 .timer {
     font-size: 24px;
     font-weight: bold;
@@ -70,43 +54,18 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 
-} */
+}
 
 .timer-press {
     font-family: 'Cambria';
     font-size: large;
     background-color: #bae792;
     position: absolute; 
-    /* top: -200px; 
-    right: 30px;  */
-    top: 10%;
-    right: 2%;
+    top: -200px; 
+    right: 30px; 
 }
 
-.center-picture {
-    display: flex;
-    position: absolute;
-    flex-wrap: wrap;
-    /* justify-content: center;
-    align-items: center; */
-    margin-top:7.5%;
-    /* margin-right: 3%; */
-    max-width: 28%;
-    height: auto;
-    /* display: block; */
-    gap: 5;
-}
-/* .bottom-image, .tikets {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    gap: 10px; 
-} */
 
-/* .tikets img {
-    height: auto;
-    display: block;
-} */
 #board {
     display: grid;
     grid-template-columns: 2fr repeat(9, 1fr) 2fr;
@@ -560,7 +519,7 @@ img {
     justify-self: end;
 }
 
-/* .bottom-image {
+.bottom-image {
     width: 30%;
     height: 30%;
     position: absolute;
@@ -574,7 +533,7 @@ img {
     position: absolute;
     z-index: 10;
     margin-left: 13px;
-} */
+}
 
 .top-right-image img {
     width: 100%;
@@ -611,7 +570,6 @@ img {
     cursor: pointer;
     z-index: 10;
     /* ודא שהקוביה מעל אלמנטים אחרים */
-    padding-left: 1%;
 }
 
 
@@ -663,12 +621,11 @@ img {
 
 #player-order-message {
     position: absolute;
-    
-    top: 10%px;
-    left: 3%; /* המרחק מהצד הימני */
-    width: 15%; /* רוחב תיבת ההודעה */
-    background-color: rgba(255, 255, 255, 0.8);/* רקע לבן שקוף */
-    padding: 1%; /* ריווח פנימי */
+    top: -150px;
+    left: 80px; /* המרחק מהצד הימני */
+    width: 200px; /* רוחב תיבת ההודעה */
+    background-color: rgba(255, 255, 255, 0.8); /* רקע לבן שקוף */
+    padding: 10px; /* ריווח פנימי */
     border-radius: 8px; /* פינות מעוגלות */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* הצללה */
     font-family: 'Arial', sans-serif; /* גופן */
@@ -676,45 +633,4 @@ img {
     color: #333; /* צבע הטקסט */
     z-index: 10; /* מיקום עליון יחסית לשאר האלמנטים */
     text-align: center; /* יישור לימין */
-}
-/* background-color: rgba(255, 255, 255, 0.8); */
-
-@media only screen and (max-width: 1150px) {
-    #player-order-message{
-        font-size: 90%; /* גודל הטקסט */
-        top: 26%;
-        left: 85%; /* המרחק מהצד הימני */
-    }
-    .timer-container{
-        top: 12%;
-        right: 1%;
-    }
-    .timer-press{
-        top: 17%;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .center-picture{
-        width: 1500px;
-        /* height: 100%; */
-    }
-}
-
-
-@media only screen and (max-width: 800px) {
-    #player-order-message{
-        font-size: 90%; /* גודל הטקסט */
-        top: 85%;
-        left: 10%; /* המרחק מהצד הימני */
-
-    }
-    /* .timer-press {
-        font-size: large;
-        position: absolute; 
-        top: -200px; 
-        right: 30px; 
-        top: 90%;
-        right: 10%;
-    } */
 }
