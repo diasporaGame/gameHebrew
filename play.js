@@ -81,7 +81,48 @@ function rollDiceAndMovePlayers() {
 }
 
 
+// function startTimer(duration, display) {
+//     var timer = duration * 1000;
+
+//     // בדוק אם יש כבר טיימר פעיל ונקה אותו
+//     if (intervalId) {
+//         clearInterval(intervalId);
+//     }
+//     isTimerRunning = true;
+//     // הפעל טיימר חדש
+//     intervalId = setInterval(function () {
+//         var minutes = parseInt(timer / 60000, 10);
+//         var seconds = parseInt((timer % 60000) / 1000, 10);
+//         var milliseconds = parseInt(timer % 1000, 10);
+
+//         minutes = minutes < 10 ? "0" + minutes : minutes;
+//         seconds = seconds < 10 ? "0" + seconds : seconds;
+//         milliseconds = milliseconds < 100 ? "0" + milliseconds : milliseconds;
+
+//         display.textContent = minutes + ":" + seconds + ":" + milliseconds;
+
+//         if ((timer -= 10) < 0) {
+//             clearInterval(intervalId);
+//             display.textContent = "1:00:000";
+
+//             openAlertModal("הזמן נגמר!");
+//             isTimerRunning = false;
+
+//             timer = duration * 1000;
+
+//             // הוסף מאזין אירועים מחדש להפעלת הטיימר לאחר סיום
+//             display.addEventListener('click', function () {
+//                 startTimer(duration, display);
+//                 display.removeEventListener('click', arguments.callee);
+//             });
+//         }
+//     }, 10);
+
+//     return intervalId;
+// }
+
 function startTimer(duration, display) {
+    console.log(duration+" duration    "+display);
     var timer = duration * 1000;
 
     // בדוק אם יש כבר טיימר פעיל ונקה אותו
@@ -117,11 +158,30 @@ function startTimer(duration, display) {
             });
         }
     }, 10);
+  
+    const reset = document.getElementById('reset');
+reset.onclick = function () {
+    // בדוק אם יש טיימר פעיל ונקה אותו
+    if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null; // מאפס את ה-ID כדי לסמן שהטיימר נעצר
+    }
+
+    // אפס את התצוגה לערך ההתחלתי
+    display.textContent = "1:00:000";
+
+    // אפס את מצב הטיימר כדי שאפשר יהיה להפעיל אותו מחדש
+    isTimerRunning = false;
+    // הוסף מאזין אירועים חדש כדי להפעיל את הטיימר לאחר איפוס
+    display.addEventListener('click', function () {
+        if (!isTimerRunning) { // רק אם הטיימר לא רץ
+            startTimer(60, display); // מתחיל את הטיימר מחדש עם הזמן שהוגדר (60 שניות)
+        }
+    });
+};
 
     return intervalId;
 }
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const players = JSON.parse(localStorage.getItem('players'));
 
